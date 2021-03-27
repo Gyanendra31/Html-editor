@@ -1,12 +1,6 @@
-function editor(obj) {
-  if (this === window) {
-    return new editor(obj);
-  }
-  if (!obj.id) {
-    return;
-  }
+(function() {
   // NEW DEFINED FUNCTIONS
-  this.create = function(val) {
+  var create = function(val) {
     if (typeof val == 'string') {
       val = val.toUpperCase();
       return document.createElement(val);
@@ -17,10 +11,19 @@ function editor(obj) {
         return a;
       }
     }
-  }
-  this.child = function(parent, child) {
+  };
+  var child = function(parent, child) {
     return parent.appendChild(child);
   };
+}());
+function editor(obj) {
+  if (this === window) {
+    return new editor(obj);
+  }
+  if (!obj.id) {
+    return;
+  }
+
   this.el = document.getElementById(obj.id);
   console.log(this.el);
 
