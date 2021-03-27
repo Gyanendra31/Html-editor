@@ -5,17 +5,6 @@ function editor(obj) {
   if (!obj.id) {
     return;
   }
-  this.el = document.getElementById(obj.id);
-  console.log(this.el);
-
-  var line = this.create({
-    tag: 'div',
-    class: 'line-container',
-  });
-
-  // CHILDS
-  this.child(this.el, line);
-
   // NEW DEFINED FUNCTIONS
   this.create = function(val) {
     if (typeof val == 'string') {
@@ -32,4 +21,16 @@ function editor(obj) {
   this.child = function(parent, child) {
     return parent.appendChild(child);
   };
+  this.el = document.getElementById(obj.id);
+  console.log(this.el);
+
+  var line = this.create({
+    tag: 'div',
+    class: 'line-container',
+  });
+
+  // CHILDS
+  this.child(this.el, line);
+
+
 }
