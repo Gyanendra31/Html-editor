@@ -24,7 +24,6 @@ function editor(obj) {
   }
 
   this.el = document.getElementById(obj.id);
-  console.log(this.el);
 
   var line = create({
     tag: 'div',
