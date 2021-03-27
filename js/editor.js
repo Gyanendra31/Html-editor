@@ -1,21 +1,20 @@
-(function() {
-  // NEW DEFINED FUNCTIONS
-  var create = function(val) {
-    if (typeof val == 'string') {
-      val = val.toUpperCase();
-      return document.createElement(val);
-    } else if (typeof val == 'object') {
-      if (val.tag && val.class) {
-        var a = document.createElement(val.tag);
-        a.className = val.class;
-        return a;
-      }
+// NEW DEFINED FUNCTIONS
+var create = function(val) {
+  if (typeof val == 'string') {
+    val = val.toUpperCase();
+    return document.createElement(val);
+  } else if (typeof val == 'object') {
+    if (val.tag && val.class) {
+      var a = document.createElement(val.tag);
+      a.className = val.class;
+      return a;
     }
-  };
-  var child = function(parent, child) {
-    return parent.appendChild(child);
-  };
-}());
+  }
+};
+var child = function(parent, child) {
+  return parent.appendChild(child);
+};
+
 function editor(obj) {
   if (this === window) {
     return new editor(obj);
