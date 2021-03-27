@@ -1,6 +1,6 @@
 // NEW DEFINED FUNCTIONS
 
-function editor(obj) {
+function edior(obj) {
   if (this === window) {
     return new editor(obj);
   }
