@@ -6,7 +6,7 @@ function editor(obj) {
     return;
   }
   this.el = document.getElementById(obj.id);
-  this.el.contentEditable = true;
+  console.log(this.el);
 
   var line = this.create({
     tag: 'div',
