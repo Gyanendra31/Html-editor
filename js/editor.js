@@ -1,6 +1,6 @@
 function editor(obj) {
   if (this === window) {
-    return new editor();
+    return new editor(obj);
   }
   if (!obj.id) {
     return;
