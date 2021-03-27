@@ -34,5 +34,4 @@ function editor(obj) {
   // CHILDS
   child(this.el, line);
 
-
 }
