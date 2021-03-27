@@ -9,7 +9,7 @@
   border: 1px solid black;
   border-radius: 5px;
 }
-.line {
+.line-container {
   background-color: yellow;
   min-width: 40px;
   position: absolute;
