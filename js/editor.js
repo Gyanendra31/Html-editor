@@ -26,13 +26,13 @@ function editor(obj) {
   this.el = document.getElementById(obj.id);
   console.log(this.el);
 
-  var line = this.create({
+  var line = create({
     tag: 'div',
     class: 'line-container',
   });
 
   // CHILDS
-  this.child(this.el, line);
+  child(this.el, line);
 
 
 }
