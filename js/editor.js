@@ -34,3 +34,4 @@ function editor(obj) {
   child(this.el, line);
 
 }
+console.log(editor);
